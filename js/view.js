@@ -31,9 +31,13 @@ View.prototype.displayCases = function(cases){
 
     var caseHTML = document.createElement('div');
     caseHTML.className += "case";
-    caseHTML.setAttribute("case-id", total);
-    caseHTML.setAttribute("case-type", cases[total].status);
+    caseHTML.setAttribute("data-case-id", total);
+    caseHTML.setAttribute("data-case-type", cases[total].status);
+    caseHTML.addEventListener("click", this.clickCase.bind(this));
     currentLine.appendChild(caseHTML);
   }
 };
 
+View.prototype.clickCase = function(e){
+  this.displayCases(this.Game.updateCase(e.target.getAttribute('data-case-id')));
+};
