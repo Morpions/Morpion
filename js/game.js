@@ -30,13 +30,13 @@ function Case (){
 
 Game.prototype.checkResult = function(){
 	if((this.case[0].status=this.currentPlayer && this.case[1].status=this.currentPlayer && this.case[2].status=this.currentPlayer)
-		|| (this.case[3].status=this.currentPlayer && this.case[4].status=this.currentPlayer && this.case[5].status=this.currentPlayer)
-		|| (this.case[6].status=this.currentPlayer && this.case[7].status=this.currentPlayer && this.case[8].status=this.currentPlayer)
-		|| (this.case[1].status=this.currentPlayer && this.case[4].status=this.currentPlayer && this.case[7].status=this.currentPlayer)
-		|| (this.case[2].status=this.currentPlayer && this.case[5].status=this.currentPlayer && this.case[8].status=this.currentPlayer)
-		|| (this.case[0].status=this.currentPlayer && this.case[3].status=this.currentPlayer && this.case[6].status=this.currentPlayer)
-		|| (this.case[0].status=this.currentPlayer && this.case[4].status=this.currentPlayer && this.case[8].status=this.currentPlayer)
-		|| (this.case[6].status=this.currentPlayer && this.case[4].status=this.currentPlayer && this.case[2].status=this.currentPlayer)){
+		||(this.case[3].status=this.currentPlayer && this.case[4].status=this.currentPlayer && this.case[5].status=this.currentPlayer)
+		||(this.case[6].status=this.currentPlayer && this.case[7].status=this.currentPlayer && this.case[8].status=this.currentPlayer)
+		||(this.case[1].status=this.currentPlayer && this.case[4].status=this.currentPlayer && this.case[7].status=this.currentPlayer)
+		||(this.case[2].status=this.currentPlayer && this.case[5].status=this.currentPlayer && this.case[8].status=this.currentPlayer)
+		||(this.case[0].status=this.currentPlayer && this.case[3].status=this.currentPlayer && this.case[6].status=this.currentPlayer)
+		||(this.case[0].status=this.currentPlayer && this.case[4].status=this.currentPlayer && this.case[8].status=this.currentPlayer)
+		||(this.case[6].status=this.currentPlayer && this.case[4].status=this.currentPlayer && this.case[2].status=this.currentPlayer)){
 
 		alert(this.currentPlayer + " Remporte la partie");
 		return true;
